@@ -59,14 +59,14 @@ const Customers: React.FC = (props) => {
   };
 
   return <>
-<h1 className="headerTitle">Customers Table</h1>
+<h1 className="headerTitle">顧客テーブル</h1>
     <table id="customers">
       <thead>
         <tr>
-          <th onClick={() => sortData('customerId')}>Customer Id</th>
-          <th onClick={() => sortData('customerName')}>Customer Name</th>
-          <th onClick={() => sortData('totalSpent')}>Reward</th>
-          <th onClick={() => sortData('totalSpent')}>Total Spent</th>
+          <th onClick={() => sortData('customerId')}>顧客 Id</th>
+          <th onClick={() => sortData('customerName')}>顧客名</th>
+          <th onClick={() => sortData('totalSpent')}>褒美</th>
+          <th onClick={() => sortData('totalSpent')}>総支出額</th>
         </tr>
       </thead>
       <tbody>

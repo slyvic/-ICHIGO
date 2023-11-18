@@ -18,7 +18,7 @@ const OrdersSettings: React.FC<OrdersSettingsProps> = (props) => {
 
   let head;
   if (props.isNew) {
-    head = 'New Order';
+    head = '新規注文';
   }
 
   const saveData = (e: React.FormEvent<HTMLFormElement>) => {
@@ -53,21 +53,21 @@ const OrdersSettings: React.FC<OrdersSettingsProps> = (props) => {
         <div>
           <h1 className="headerTitle">{head}</h1>
           <div className="panel">
-            <label>CustomerId</label>
+            <label>顧客 Id</label>
             <input className="bigInput" type="number" onChange={event => setCustomerid(event.target.value)} />
-            <label>Customername</label>
+            <label>顧客名</label>
             <input className="bigInput" type="text" onChange={event => setCustomername(event.target.value)} />
-            <label>OrderId</label>
+            <label>注文 ID</label>
             <input className="bigInput" type="text" onChange={event => setOrderid(event.target.value)} />
-            <label>Amount</label>
+            <label>額</label>
             <input className="bigInput" type="number" onChange={event => setTotalincents(event.target.value)} />
-            <label>OrderDate</label>
+            <label>注文日</label>
             <input className="bigInput" type="date" onChange={event => setDate(event.target.value)} />
           </div>
         </div>
         <div className="footer">
-          <input type="button" className="cancelButton" value={"Cancel"} onClick={() => props.setStatus('Table')} />
-          <input type="submit" className="saveButton" value={"Submit"} onClick={(e:any) => { saveData(e) }} />
+          <input type="button" className="cancelButton" value={"キャンセル"} onClick={() => props.setStatus('Table')} />
+          <input type="submit" className="saveButton" value={"提出する"} onClick={(e:any) => { saveData(e) }} />
         </div>
       </form>
     </>

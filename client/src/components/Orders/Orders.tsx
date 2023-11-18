@@ -71,13 +71,13 @@ const Orders: React.FC = (props) => {
                             type="number"
                             id="customerId"
                             className="searchbar"
-                            placeholder="Search by customer ID"
+                            placeholder="顧客IDで検索"
                             value={customerId}
                             onChange={(e) => setCustomerId(e.target.value)}
                         />
 
                         <button className="addOrderButton" onClick={addNewOrder}>
-                            New Order
+                            新規注文
                             <div className="imgPlus">
                                 <img src={Plus} alt="plus" />
                             </div>
@@ -91,16 +91,16 @@ const Orders: React.FC = (props) => {
                         <thead>
                             <tr>
                                 <th onClick={() => sortData('orderId')}>
-                                    No
+                                    番号
                                 </th>
                                 <th onClick={() => sortData('customerId')}>
-                                    Customer ID
+                                    顧客 ID
                                 </th>
                                 <th onClick={() => sortData('customerName')}>
-                                    Customer Name
+                                    顧客名
                                 </th>
-                                <th onClick={() => sortData('totalInCents')}>Amount</th>
-                                <th onClick={() => sortData('date')}>Order Date</th>
+                                <th onClick={() => sortData('totalInCents')}>額</th>
+                                <th onClick={() => sortData('date')}>注文日</th>
                             </tr>
                         </thead>
                         <tbody>

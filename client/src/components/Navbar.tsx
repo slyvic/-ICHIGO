@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Navbar:React.FC = () => {
+const Navbar: React.FC = () => {
     return (
         <div className='navbar'>
             <a href='/orders' className='navbaritem'>
-                Orders
+                注文
             </a>
             <a href='/' className='navbaritem'>
-                Customers
+                お客様
             </a>
         </div>
     )
