@@ -1,6 +1,6 @@
  # Tier Service 
  
- ![ structure ] ( structure.png ) 
+ ![ structure ].( structure.png ) 
  
  ### Install dependencies 
  
