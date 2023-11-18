@@ -26,7 +26,7 @@ const CustomerDetails: React.FC = () => {
         const response = await axios.get(`http://localhost:8000/api/customers/${customerId}`);
         setCustomer(response.data);
       } catch (error) {
-        console.error('Error fetching customer:', error);
+        console.error('注文の取得中にエラーが発生しました:', error);
       }
     };
 
@@ -42,18 +42,18 @@ const CustomerDetails: React.FC = () => {
   // Render the component with the data
   return (
     <>
-      <p className='headerTitle'>Order Details</p>
+      <p className='headerTitle'>注文詳細</p>
       <div className='customerpanel'>
-        <p>Customer ID: {customer.customerId}</p>
-        <p>Customer Name: {customer.customerName}</p>
-        <p>Tier Name: <Tier tier={customer.tierName} /></p>
-        <p>Start Date: {customer.startDate}</p>
-        <p>Total Spent: $ {customer.totalSpent}</p>
-        <p>This Year Spent: $ {customer.thisYearSpent}</p>
-        <p>Amount for Next Tier: $ {customer.amountForNextTier}</p>
-        <p>Next Year Tier:{customer.nextYearTier === null ? <Tier tier={customer.tierName} /> : <Tier tier={customer.nextYearTier} />} </p>
-        <p>End Date: {customer.endDate}</p>
-        <p>Amount for Keep Tier: ${customer.amountForKeepTier}</p>
+        <p>お客様 ID: {customer.customerId}</p>
+        <p>顧客名: {customer.customerName}</p>
+        <p>ティア名: <Tier tier={customer.tierName} /></p>
+        <p>開始日: {customer.startDate}</p>
+        <p>総支出額: $ {customer.totalSpent}</p>
+        <p>今年過ごした年: $ {customer.thisYearSpent}</p>
+        <p>次の階層の金額: $ {customer.amountForNextTier}</p>
+        <p>来年のティア:{customer.nextYearTier === null ? <Tier tier={customer.tierName} /> : <Tier tier={customer.nextYearTier} />} </p>
+        <p>終了日: {customer.endDate}</p>
+        <p>キープ層の金額: ${customer.amountForKeepTier}</p>
         <div className='flex'>
 
           <div className={`meter`}>

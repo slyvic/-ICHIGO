@@ -29,7 +29,7 @@ const Orders: React.FC = (props) => {
 
             // Calculate total pages based on the response data
         } catch (error) {
-            console.error('Error fetching orders:', error);
+            console.error('注文の取得中にエラーが発生しました:', error);
         }
     }, [customerId]);
 
@@ -134,7 +134,7 @@ const Orders: React.FC = (props) => {
             );
         }
         default: {
-            return <h1>Error</h1>;
+            return <h1>エラー</h1>;
         }
     }
 };

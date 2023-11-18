@@ -24,7 +24,7 @@ const Customers: React.FC = (props) => {
       setCustomers(response.data);
 
     } catch (error) {
-      console.error('Error fetching orders:', error);
+      console.error('注文の取得中にエラーが発生しました:', error);
     }
   }, []);
 

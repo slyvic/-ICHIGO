@@ -37,12 +37,12 @@ const OrdersSettings: React.FC<OrdersSettingsProps> = (props) => {
             props.setClick(props.click + 1);
             props.setStatus('Table');
           } else {
-            alert("Order Failed");
+            alert("注文に失敗しました");
           }
-        }).catch(er => alert(`The data was not sent. ${er}`));
+        }).catch(er => alert(`データは送信されませんでした。 ${er}`));
       }
     } else {
-      alert("Missing Input");
+      alert("入力がありません");
       e.preventDefault();
     }
   };
