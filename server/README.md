@@ -7,7 +7,7 @@
  ``` バッシュ 
  yarn install 
  ```` 
- 
+
  ### Run 
  ``` バッシュ 
  yarn dev 
