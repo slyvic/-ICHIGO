@@ -1,23 +1,34 @@
 # Tier Client
 
-## Available Scripts
+## 利用可能なスクリプト
 
-In the project directory, you can run:
+プロジェクト ディレクトリでは、次を実行できます。
 
 ### `yarn install`
 
 ### `yarn dev`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+アプリを開発モードで実行します。\
+[http://localhost:3000](http://localhost:3000) を開いてブラウザで表示します。
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+編集するとページが再読み込みされます。\
+コンソールには lint エラーも表示されます。
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+実稼働用のアプリを「build」フォルダーにビルドします。\
+React を実稼働モードに正しくバンドルし、最高のパフォーマンスが得られるようにビルドを最適化します。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ビルドは縮小され、ファイル名にはハッシュが含まれます。\
+アプリをデプロイする準備ができました。
+
+## ページ
+
+###顧客
+![構造](customers.png)
+
+＃＃＃ 注文
+![構造](order.png)
+
+### 顧客の詳細
+![構造](customerdetail.png)
