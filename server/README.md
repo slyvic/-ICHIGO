@@ -1,15 +1,23 @@
  # Tier Service 
  
- ![ 構造 ].( structure.png ) 
- 
+![structure](structure.png)
+
  ### Install dependencies 
- 
- ``` バッシュ 
+ ``` Bash 
  yarn install 
  ```` 
-
+ 
  ### Run 
- ``` バッシュ 
+ ``` Bash 
  yarn dev 
+ ```` # Tier Service 
+ ![ st ] .( structure.png ) 
+ ### Install dependencies 
+ ``` Bash 
+ yarn install 
  ```` 
  
+ ### Run 
+ ``` Bash 
+ yarn dev 
+ ```` 
