@@ -3,13 +3,14 @@ import axios from "axios";
 import { useHistory } from 'react-router-dom'
 import Tier from "../Tier";
 
+//Customer オブジェクトのインターフェースを定義する
 interface Customer {
   _id: string;
-  customerId: string;
-  customername: string;
-  reward: string;
-  totalamount: number;
-  lastdate: string;
+  customerId: string; // 顧客ID
+  customername: string; // 顧客名
+  reward: string; // 褒美
+  totalamount: number; // 総支出額
+  lastdate: string; // 最終日
   [key: string]: string | number;
 }
 
@@ -18,6 +19,7 @@ const Customers: React.FC = (props) => {
   const [customers, setCustomers] = useState<Customer[]>([]);
   const [arrow, setArrow] = useState<boolean>(true);
 
+  // 注文データを取得する関数を定義します
   const fetchOrders = useCallback(async () => {
     try {
       const response = await axios.get('http://localhost:8000/api/customers');
@@ -28,10 +30,12 @@ const Customers: React.FC = (props) => {
     }
   }, []);
 
+  // コンポーネントの初回レンダリング時に注文データを取得します
   useEffect(() => {
     fetchOrders();
   }, [fetchOrders]);
 
+  // テーブルの行がクリックされたときの処理を定義します
   const handleRowClick = (el: any) => {
     history.push({
       pathname: `/customers/${el.customerId}`,
@@ -39,6 +43,7 @@ const Customers: React.FC = (props) => {
     });
   };
 
+  // データをソートする関数を定義します
   const sortData = (property: string) => {
     const sortedData = [...customers].sort((a, b) => {
       if (a[property] < b[property]) {
@@ -58,8 +63,9 @@ const Customers: React.FC = (props) => {
     setArrow(!arrow);
   };
 
+  // コンポーネントのレンダリング
   return <>
-<h1 className="headerTitle">顧客テーブル</h1>
+    <h1 className="headerTitle">顧客テーブル</h1>
     <table id="customers">
       <thead>
         <tr>

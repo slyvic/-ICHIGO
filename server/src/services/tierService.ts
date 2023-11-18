@@ -8,14 +8,14 @@ const TierDatas: Tier[] = [
 
 export const tierService = {
     /**
-     * calculate current tier and next level Tier info
-     * @param totalSpent 
-     * @returns {currentTier, nextTier, isMaxTier}
+     * 現在のティアと次のレベルのティア情報を計算します
+     * @param totalSpent : 累計支出額
+     * @returns {currentTier, nextTier, isMaxTier}: 現在のティア、次のティア、最大のティアかどうか
      */
     getTier: (totalSpent: number): Tiers => {
         let currentTier = TierDatas[0];
         for (var i = 2; i >= 0; i--) {
-            // start from Gold tier
+           // ゴールド層から開始
             if (TierDatas[i].totalSpent <= totalSpent) {
                 currentTier = TierDatas[i];
                 break;
