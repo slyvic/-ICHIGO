@@ -1,15 +1,12 @@
-# Tier Service 
-
+ # Tier Service 
+ 
 ![structure](structure.png)
 
-### Install Dependencies
-
-```bash
-yarn install
-```
-
-### Run
-```bash
-yarn dev
-```
-
+ ### Install dependencies 
+ ``` Bash 
+ yarn install 
+ ```` 
+ 
+ ### Run 
+ ``` Bash 
+ yarn dev 
