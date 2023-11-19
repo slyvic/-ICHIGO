@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+// OrdersSettings オブジェクトのインターフェースを定義する
 interface OrdersSettingsProps {
-  isNew: boolean;
-  setClick: React.Dispatch<React.SetStateAction<number>>;
-  click: number;
-  setStatus: React.Dispatch<React.SetStateAction<string>>;
-  setCurrent: React.Dispatch<React.SetStateAction<boolean>>;
+  isNew: boolean; // 新規注文かどうかを示すフラグ
+  setClick: React.Dispatch<React.SetStateAction<number>>; // clickステート変数のセッター関数
+  click: number; // clickステート変数
+  setStatus: React.Dispatch<React.SetStateAction<string>>; // statusステート変数のセッター関数
+  setCurrent: React.Dispatch<React.SetStateAction<boolean>>; // currentステート変数のセッター関数
 }
 
 const OrdersSettings: React.FC<OrdersSettingsProps> = (props) => {
@@ -21,6 +22,7 @@ const OrdersSettings: React.FC<OrdersSettingsProps> = (props) => {
     head = '新規注文';
   }
 
+  // データを保存する関数を定義します
   const saveData = (e: React.FormEvent<HTMLFormElement>) => {
     if (customerId !== '' && customerName !== '' && orderId !== '' && totalInCents !== '' && date !== '') {
       e.preventDefault();
@@ -32,7 +34,6 @@ const OrdersSettings: React.FC<OrdersSettingsProps> = (props) => {
           totalInCents: parseInt(totalInCents),
           date: date
         }).then((res) => {
-          
           if (res.status === 200) {
             props.setClick(props.click + 1);
             props.setStatus('Table');
@@ -47,6 +48,7 @@ const OrdersSettings: React.FC<OrdersSettingsProps> = (props) => {
     }
   };
 
+  // コンポーネントのレンダリング
   return (
     <>
       <form className="mainForm">

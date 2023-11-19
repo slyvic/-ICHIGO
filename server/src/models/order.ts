@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
+/**
+• OrderSchemaは注文のスキーマ定義です。
+ */
 const OrderSchema = new Schema({
 	orderId: String,
 	customerId: Number,
@@ -13,4 +16,7 @@ const OrderSchema = new Schema({
 	}
 });
 
+/**
+• Ordersモデルは注文データのMongooseモデルです。
+ */
 export const Orders = mongoose.model("orders", OrderSchema);
