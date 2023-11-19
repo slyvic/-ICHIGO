@@ -37,10 +37,7 @@ const Customers: React.FC = (props) => {
 
   // テーブルの行がクリックされたときの処理を定義します
   const handleRowClick = (el: any) => {
-    history.push({
-      pathname: `/customers/${el.customerId}`,
-      state: el,
-    });
+    history.push(`/customers/${el.customerId}`);
   };
 
   // データをソートする関数を定義します
