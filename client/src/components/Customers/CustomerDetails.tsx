@@ -34,9 +34,9 @@ const CustomerDetails: React.FC = () => {
   }, [customerId]);
 
   if (!customer) {
-    return <div>Loading...</div>;
+    return <div>読み込み中...</div>;
   }
-  console.log(customer.nextYearTier)
+  
   const progressbarwidth = (customer.thisYearSpent / 500) * 100
 
   // Render the component with the data
@@ -56,7 +56,7 @@ const CustomerDetails: React.FC = () => {
         <p>キープ層の金額: ${customer.amountForKeepTier}</p>
         <div className='flex'>
 
-          <div className={`meter`}>
+          <div className='meter'>
             <span style={{ width: `${progressbarwidth}%` }}></span>
           </div>
 
